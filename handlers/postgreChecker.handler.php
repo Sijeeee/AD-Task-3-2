@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/../utils/envSetter.util.php';
 $host = "host.docker.internal"; 
 $port = "5112";
 $username = "user";
