@@ -1,0 +1,16 @@
+{
+    "name": "ceej/ad-meeting-calendar",
+    "type": "project",
+    "authors": [
+        {
+            "name": "ceej",
+            "email": "ceejjay73@gmail.com"
+        }
+    ],
+    "scripts": {
+        "start": "php -S localhost:8000 router.php"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
