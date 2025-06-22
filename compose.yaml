@@ -5,6 +5,9 @@ services:
     container_name: ad-meeting-calendar-service
     ports:
       - "8000:8000"
+    volumes:
+      - ./.env:/var/www/html/.env
+
     develop:
       watch:
         - path: .
@@ -34,8 +37,8 @@ services:
     container_name: ad-meeting-calendar-postgresql
     restart: always
     environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: ceej
+      POSTGRES_PASSWORD: 1234
       POSTGRES_DB: calendardb
     ports:
       - "5112:5432"
