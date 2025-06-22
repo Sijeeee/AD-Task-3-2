@@ -2,8 +2,8 @@
 require_once __DIR__ . '/../utils/envSetter.util.php';
 $host = "host.docker.internal"; 
 $port = "5112";
-$username = "user";
-$password = "password";
+$username = "ceej";
+$password = "1234";
 $dbname = "calendardb";
 
 $conn_string = "host=$host port=$port dbname=$dbname user=$username password=$password";
