@@ -1,8 +1,6 @@
 <?php
 declare(strict_types=1);
 
-define('UTILS_PATH', __DIR__);
-
 // 1) Composer autoload
 require 'vendor/autoload.php';
 
@@ -19,15 +17,15 @@ $pdo = new PDO($dsn, $pgConfig['user'], $pgConfig['pass'], [
 ]);
 
 // Just indicator it was working
-echo "Applying schema from database/user.model.sql…\n";
+echo "Applying schema from database/users.model.sql…\n";
 
-$sql = file_get_contents('database/user.model.sql');
+$sql = file_get_contents('database/users.model.sql');
 
 // Another indicator but for failed creation
 if ($sql === false) {
-  throw new RuntimeException("Could not read database/user.model.sql");
+  throw new RuntimeException("Could not read database/users.model.sql");
 } else {
-    echo "Creation Success from the database/user.model.sql";
+    echo "Creation Success from the database/users.model.sql";
 }
 
 // If your model.sql contains a working command it will be executed
