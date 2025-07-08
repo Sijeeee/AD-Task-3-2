@@ -5,8 +5,6 @@ require_once BASE_PATH . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(BASE_PATH);
 $dotenv->load();
 
-echo "✅ ENV LOADED TEST: PG_HOST = " . $_ENV['PG_HOST'] . "<br>";
-echo "✅ ENV LOADED TEST: MONGO_URI = " . $_ENV['MONGO_URI'] . "<br>";
 
 // Manually override PG_HOST for local execution
 if (php_sapi_name() === 'cli') {
